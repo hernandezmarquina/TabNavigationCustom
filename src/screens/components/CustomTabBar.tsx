@@ -40,6 +40,7 @@ const CustomTabBar = (props: BottomTabBarProps) => {
 const styles = StyleSheet.create({
   tabsContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
     backgroundColor: 'transparent',
     position: 'absolute',
     left: 0,
@@ -47,15 +48,15 @@ const styles = StyleSheet.create({
     bottom: 8,
   },
   tabContainer: {
-    flex: 1,
-    height: 50,
+    height: 60,
+    width: 60,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
     marginHorizontal: 8,
   },
   tabText: {
-    fontSize: 12,
+    fontSize: 10,
   },
 });
 

@@ -27,7 +27,9 @@ const CustomTabBar = (props: BottomTabBarProps) => {
             key={route.name}
             onPress={onPress}
             style={styles.tabContainer}>
-            <Text style={{color: isFocused ? 'red' : '#222'}}>{label}</Text>
+            <Text style={[styles.tabText, {color: isFocused ? 'red' : '#222'}]}>
+              {label}
+            </Text>
           </TouchableOpacity>
         );
       })}
@@ -38,11 +40,22 @@ const CustomTabBar = (props: BottomTabBarProps) => {
 const styles = StyleSheet.create({
   tabsContainer: {
     flexDirection: 'row',
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 8,
   },
   tabContainer: {
     flex: 1,
     height: 50,
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    marginHorizontal: 8,
+  },
+  tabText: {
+    fontSize: 12,
   },
 });
 

@@ -5,7 +5,7 @@ import styles from '../../Styles';
 
 const SettingsScreen = () => {
   return (
-    <View style={[styles.container, {backgroundColor: '#A31ACB'}]}>
+    <View style={[styles.container, {backgroundColor: '#9117b4'}]}>
       <Text style={styles.title}>Settings Screen</Text>
     </View>
   );

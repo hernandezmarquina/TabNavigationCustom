@@ -37,8 +37,8 @@ function App(): JSX.Element {
         screenOptions={screenOptions}
         tabBar={props => <CustomTabBar {...props} />}>
         <Tab.Screen name="ChatScreen" component={ChatScreen} />
-        <Tab.Screen name="MapScreen" component={MapScreen} />
         <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Tab.Screen name="MapScreen" component={MapScreen} />
         <Tab.Screen name="SettingsScreen" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>

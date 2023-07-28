@@ -5,7 +5,7 @@ import styles from '../../Styles';
 
 const MapScreen = () => {
   return (
-    <View style={[styles.container, {backgroundColor: '#D21312'}]}>
+    <View style={[styles.container, {backgroundColor: '#bb1110'}]}>
       <Image style={styles.img} source={require('../../assets/map.jpg')} />
     </View>
   );

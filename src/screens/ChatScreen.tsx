@@ -5,7 +5,7 @@ import styles from '../../Styles';
 
 const ChatScreen = () => {
   return (
-    <View style={[styles.container, {backgroundColor: '#F9B208'}]}>
+    <View style={[styles.container, {backgroundColor: '#e2a205'}]}>
       <Text style={styles.title}>Chat Screen</Text>
     </View>
   );

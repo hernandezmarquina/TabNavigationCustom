@@ -5,7 +5,7 @@ import styles from '../../Styles';
 
 const ProfileScreen = () => {
   return (
-    <View style={[styles.container, {backgroundColor: '#03C988'}]}>
+    <View style={[styles.container, {backgroundColor: '#03b077'}]}>
       <Text style={styles.title}>Profile Screen</Text>
     </View>
   );

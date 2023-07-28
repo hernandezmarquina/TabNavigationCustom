@@ -1,16 +1,15 @@
 import React from 'react';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import TabView from './TabView';
 
 const CustomTabBar = (props: BottomTabBarProps) => {
   return (
     <View style={styles.tabsContainer}>
       {props.state.routes.map((route, index) => {
-        const label = route.name;
-
         const isFocused = props.state.index === index;
 
-        const onPress = () => {
+        const onTabPressed = () => {
           const event = props.navigation.emit({
             type: 'tabPress',
             target: route.key,
@@ -23,14 +22,11 @@ const CustomTabBar = (props: BottomTabBarProps) => {
         };
 
         return (
-          <TouchableOpacity
-            key={route.name}
-            onPress={onPress}
-            style={styles.tabContainer}>
-            <Text style={[styles.tabText, {color: isFocused ? 'red' : '#222'}]}>
-              {label}
-            </Text>
-          </TouchableOpacity>
+          <TabView
+            routeName={route.name}
+            active={isFocused}
+            onTabPressed={onTabPressed}
+          />
         );
       })}
     </View>
@@ -46,17 +42,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 8,
-  },
-  tabContainer: {
-    height: 60,
-    width: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    marginHorizontal: 8,
-  },
-  tabText: {
-    fontSize: 10,
   },
 });
 
